@@ -14,6 +14,6 @@ final class AuthMiddleware implements MiddlewareInterface
             return $next($request);
         }
 
-        respond()->redirect('/login');
+        respond()->with('gagal', 'Login terlebih dahulu !')->redirect(route('login'));
     }
 }
