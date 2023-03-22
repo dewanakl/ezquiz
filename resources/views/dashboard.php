@@ -2,7 +2,9 @@
 
 <?php section('main') ?>
 
-<div class="d-flex justify-content-end align-items-center">
+<div class="d-flex justify-content-between align-items-center">
+    <h1>Dashboard</h1>
+
     <form action="<?= route('logout') ?>" method="post">
         <?= csrf() ?>
         <?= method('delete') ?>
@@ -10,7 +12,9 @@
     </form>
 </div>
 
-<h1>Dashboard</h1>
-<p>Halooo gesss !!!!!!!!!!!!!</p>
+
+<p>Halooo <?= auth()->user()->nama ?></p>
+<p><?= auth()->user()->role_id ?></p>
+
 
 <?php endsection('main') ?>

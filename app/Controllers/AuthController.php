@@ -41,6 +41,8 @@ class AuthController extends Controller
             'password' => ['required', 'hash']
         ]);
 
+        $data['role_id'] = 2;
+
         User::create($data);
 
         return $this->redirect(route('login'))->with('berhasil', 'Registrasi berhasil, silahkan login');

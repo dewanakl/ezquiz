@@ -11,7 +11,7 @@
 
     <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input type="email" name="email" class="form-control" id="email">
+        <input type="email" name="email" class="form-control" id="email" value="<?= old('email') ?>">
         <?php if (error('email')) : ?>
             <small class="text-danger"><?= error('email') ?></small>
         <?php endif ?>
@@ -27,5 +27,8 @@
 
     <button class="btn btn-outline-success" type="submit">Login</button>
 </form>
+
+<hr>
+<a href="<?= route('register') ?>">Register</a>
 
 <?php endsection('main') ?>

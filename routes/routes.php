@@ -27,4 +27,7 @@ Route::middleware(GuestMiddleware::class)->group(function () {
 Route::middleware(AuthMiddleware::class)->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::delete('/logout', [DashboardController::class, 'logout'])->name('logout');
+
+
+    Route::get('/list', [DashboardController::class, 'list'])->name('list');
 });
